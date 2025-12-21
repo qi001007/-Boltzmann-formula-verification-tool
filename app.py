@@ -21,7 +21,6 @@ def open_browser():
     except:
         pass
 
-
 # ==================== 核心引擎模块（修复版） ====================
 @jit(nopython=True, parallel=True)
 def _monte_carlo_core(beta, num_particles, num_steps, energy_levels, energy_matrix):
