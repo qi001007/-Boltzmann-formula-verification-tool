@@ -6,13 +6,13 @@ datas = [('app.py', '.')]
 binaries = []
 hiddenimports = ['numba']
 datas += copy_metadata('streamlit')
-datas += copy_metadata('plotly')
+datas += copy_metadata('tornado')
 tmp_ret = collect_all('streamlit')
 datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
 
 
 a = Analysis(
-    ['app.py'],
+    ['run.py'],
     pathex=[],
     binaries=binaries,
     datas=datas,
